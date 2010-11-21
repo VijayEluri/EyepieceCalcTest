@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import static org.hamcrest.Matchers.*;
 
 /**
  * @author portuesi
@@ -14,58 +15,52 @@ import org.junit.Test;
  */
 public class EyepieceTest {
 
+	private Eyepiece mEyepiece;
+	
 	@Before
 	public void setUp() throws Exception {
+		mEyepiece = new Eyepiece();
 	}
 
 	@Test
 	public void testEyepiece() {
-		fail("Not yet implemented");
+		assertThat( mEyepiece, hasProperty("id") );
+		assertThat( mEyepiece, hasProperty("name") );
+		assertThat( mEyepiece, hasProperty("focalLength") );
+		assertThat( mEyepiece, hasProperty("apparentFOV") );
 	}
 
 	@Test
 	public void testEyepieceLongStringIntInt() {
-		fail("Not yet implemented");
+		mEyepiece = new Eyepiece( 23, "University Optics MK-80", 32, 80 );
+		
+		assertThat( mEyepiece.getId(), equalTo( 23L ));
+		assertThat( mEyepiece.getName(), equalTo( "University Optics MK-80" ));
+		assertThat( mEyepiece.getFocalLength(), equalTo( 32 ));
+		assertThat( mEyepiece.getApparentFOV(), equalTo( 80 ));
 	}
 
 	@Test
-	public void testGetId() {
-		fail("Not yet implemented");
+	public void testGetSetId() {
+		mEyepiece.setId( 145 );
+		assertThat( mEyepiece.getId(), equalTo( 145L ));
+	}
+
+	public void testGetSetName() {
+		mEyepiece.setName( "TeleVue Ethos" );
+		assertThat( mEyepiece.getName(), equalTo( "TeleVue Ethos" ));
 	}
 
 	@Test
-	public void testSetId() {
-		fail("Not yet implemented");
+	public void testGetSetFocalLength() {
+		mEyepiece.setFocalLength( 17 );
+		assertThat( mEyepiece.getFocalLength(), equalTo( 17 ));
 	}
 
 	@Test
-	public void testGetName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetFocalLength() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetFocalLength() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetApparentFOV() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetApparentFOV() {
-		fail("Not yet implemented");
+	public void testGetSetApparentFOV() {
+		mEyepiece.setApparentFOV( 65 );
+		assertThat( mEyepiece.getApparentFOV(), equalTo( 65 ));
 	}
 
 }

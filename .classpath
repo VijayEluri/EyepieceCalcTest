@@ -7,5 +7,6 @@
 	<classpathentry kind="var" path="ANDROID_JAR"/>
 	<classpathentry kind="var" path="MAPS_JAR"/>
 	<classpathentry kind="var" path="JUNIT_JAR"/>
+	<classpathentry kind="var" path="HAMCREST_JAR"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

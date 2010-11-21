@@ -17,16 +17,16 @@ public class TelescopeTest {
 
 	@Test
 	public void testTelescope() {
-		assertThat( mTelescope, hasProperty("id") );
-		assertThat( mTelescope, hasProperty("name") );
-		assertThat( mTelescope, hasProperty("focalLength") );
-		assertThat( mTelescope, hasProperty("aperture") );
+		assertThat( mTelescope, hasProperty( "id" ) );
+		assertThat( mTelescope, hasProperty( "name" ) );
+		assertThat( mTelescope, hasProperty( "focalLength" ) );
+		assertThat( mTelescope, hasProperty( "aperture" ) );
 	}
 
 	@Test
 	public void testTelescopeLongStringIntInt() {
 		mTelescope = new Telescope( 89, "Meade LX-10", 2000, 203 );
-		assertThat( mTelescope.getId(), equalTo(89L) );
+		assertThat( mTelescope.getId(), equalTo( 89L ) );
 		assertThat( mTelescope.getName(), equalTo("Meade LX-10") );
 		assertThat( mTelescope.getFocalLength(), equalTo( 2000 ) );
 		assertThat( mTelescope.getAperture(), equalTo( 203 ) );
@@ -35,7 +35,7 @@ public class TelescopeTest {
 	@Test
 	public void testGetSetId() {
 		mTelescope.setId( 1522 );
-		assertThat( mTelescope.getId(), equalTo( 1522L ));
+		assertThat( mTelescope.getId(), equalTo( 1522L ) );
 	}
 
 	@Test

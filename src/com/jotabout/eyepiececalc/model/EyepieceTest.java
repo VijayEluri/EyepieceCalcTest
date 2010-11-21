@@ -24,20 +24,20 @@ public class EyepieceTest {
 
 	@Test
 	public void testEyepiece() {
-		assertThat( mEyepiece, hasProperty("id") );
-		assertThat( mEyepiece, hasProperty("name") );
-		assertThat( mEyepiece, hasProperty("focalLength") );
-		assertThat( mEyepiece, hasProperty("apparentFOV") );
+		assertThat( mEyepiece, hasProperty( "id" ) );
+		assertThat( mEyepiece, hasProperty( "name" ) );
+		assertThat( mEyepiece, hasProperty( "focalLength" ) );
+		assertThat( mEyepiece, hasProperty( "apparentFOV" ) );
 	}
 
 	@Test
 	public void testEyepieceLongStringIntInt() {
 		mEyepiece = new Eyepiece( 23, "University Optics MK-80", 32, 80 );
 		
-		assertThat( mEyepiece.getId(), equalTo( 23L ));
-		assertThat( mEyepiece.getName(), equalTo( "University Optics MK-80" ));
-		assertThat( mEyepiece.getFocalLength(), equalTo( 32 ));
-		assertThat( mEyepiece.getApparentFOV(), equalTo( 80 ));
+		assertThat( mEyepiece.getId(), equalTo( 23L ) );
+		assertThat( mEyepiece.getName(), equalTo( "University Optics MK-80" ) );
+		assertThat( mEyepiece.getFocalLength(), equalTo( 32 ) );
+		assertThat( mEyepiece.getApparentFOV(), equalTo( 80 ) );
 	}
 
 	@Test
@@ -46,21 +46,22 @@ public class EyepieceTest {
 		assertThat( mEyepiece.getId(), equalTo( 145L ));
 	}
 
+	@Test
 	public void testGetSetName() {
 		mEyepiece.setName( "TeleVue Ethos" );
-		assertThat( mEyepiece.getName(), equalTo( "TeleVue Ethos" ));
+		assertThat( mEyepiece.getName(), equalTo( "TeleVue Ethos" ) );
 	}
 
 	@Test
 	public void testGetSetFocalLength() {
 		mEyepiece.setFocalLength( 17 );
-		assertThat( mEyepiece.getFocalLength(), equalTo( 17 ));
+		assertThat( mEyepiece.getFocalLength(), equalTo( 17 ) );
 	}
 
 	@Test
 	public void testGetSetApparentFOV() {
 		mEyepiece.setApparentFOV( 65 );
-		assertThat( mEyepiece.getApparentFOV(), equalTo( 65 ));
+		assertThat( mEyepiece.getApparentFOV(), equalTo( 65 ) );
 	}
 
 }

@@ -6,9 +6,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.xtremelabs.robolectric.RobolectricTestRunner;
+import com.jotabout.eyepiececalc.test.EyepieceCalcTestRunner;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(EyepieceCalcTestRunner.class)
 public class EyepieceAdapterTest {
 
 	@Before

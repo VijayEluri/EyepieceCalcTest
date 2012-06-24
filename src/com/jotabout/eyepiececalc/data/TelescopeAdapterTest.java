@@ -8,7 +8,9 @@ import org.junit.runner.RunWith;
 
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 
-@RunWith(RobolectricTestRunner.class)
+import com.jotabout.eyepiececalc.test.EyepieceCalcTestRunner;
+
+@RunWith(EyepieceCalcTestRunner.class)
 public class TelescopeAdapterTest {
 
 	@Before

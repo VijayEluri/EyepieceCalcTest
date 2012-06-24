@@ -3,6 +3,8 @@
 	<name>EyepieceCalcTest</name>
 	<comment></comment>
 	<projects>
+		<project>EyepieceCalc</project>
+		<project>robolectric</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
